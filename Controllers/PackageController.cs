@@ -1,6 +1,8 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using tracking_api.Models;
-using tracking_api.Models.DTOs;
+using tracking_api.DTOs.Requests;
+using tracking_api.DTOs.Responses;
 
 namespace tracking_api.Controllers;
 
@@ -16,24 +18,20 @@ public class PackageController : ControllerBase
     };
     private static List<Package> _packages = new()
     {
-        new Package { Id = 1, Name = "Zapatos", Weight = 12.2M, DestinationLocationId = 1, DestinationLocation = _locations[0] }
+        new Package { Id = 1, TrackingNumber = 1234, Name = "Zapatos", Weight = 12.2M, DestinationLocationId = 1, DestinationLocation = _locations[0] }
     };
+
+    private readonly IMapper _mapper;
+
+    public PackageController(IMapper mapper)
+    {
+        _mapper = mapper;
+    }
 
     [HttpGet]
     public IActionResult GetAll()
     {
-        var response = _packages.Select(p => new PackageResponseDto
-        {
-            Id = p.Id,
-            Name = p.Name,
-            Weight = p.Weight,
-            DestinationLocation = new LocationResponseDto
-            {
-                Id = p.DestinationLocation.Id,
-                Country = p.DestinationLocation.Country,
-                City = p.DestinationLocation.City
-            }
-        });
+        var response = _mapper.Map<List<PackageResponseDto>>(_packages);
 
         return Ok(response);
     }
@@ -45,18 +43,19 @@ public class PackageController : ControllerBase
 
         if (package == null) return NotFound();
 
-        var response = new PackageResponseDto
-        {
-            Id = package.Id,
-            Name = package.Name,
-            Weight = package.Weight,
-            DestinationLocation = new LocationResponseDto
-            {
-                Id = package.DestinationLocation.Id,
-                Country = package.DestinationLocation.Country,
-                City = package.DestinationLocation.City
-            }
-        };
+        var response = _mapper.Map<PackageResponseDto>(package);
+
+        return Ok(response);
+    }
+
+    [HttpGet("track/{trackingNumber}")]
+    public IActionResult GetByTrackingNumber(int trackingNumber)
+    {
+        var package = _packages.FirstOrDefault(p => p.TrackingNumber == trackingNumber);
+
+        if (package == null) return NotFound();
+
+        var response = _mapper.Map<PackageResponseDto>(package);
 
         return Ok(response);
     }
@@ -69,29 +68,14 @@ public class PackageController : ControllerBase
         if (destinationLocation == null)
             return BadRequest("No se encontro el destino con ID: " + packageDto.DestinationLocationId);
 
-        var newPackage = new Package
-        {
-            Id = _packages.Count + 1,
-            Name = packageDto.Name,
-            Weight = packageDto.Weight,
-            DestinationLocationId = destinationLocation.Id,
-            DestinationLocation = destinationLocation
-        };
+        var newPackage = _mapper.Map<Package>(packageDto);
+
+        newPackage.Id = _packages.Count + 1;
+        newPackage.DestinationLocation = destinationLocation;
 
         _packages.Add(newPackage);
 
-        var response = new PackageResponseDto
-        {
-            Id = newPackage.Id,
-            Name = newPackage.Name,
-            Weight = newPackage.Weight,
-            DestinationLocation = new LocationResponseDto
-            {
-                Id = destinationLocation.Id,
-                Country = destinationLocation.Country,
-                City = destinationLocation.City
-            }
-        };
+        var response = _mapper.Map<PackageResponseDto>(newPackage);
 
         return CreatedAtAction(nameof(GetById), new { id = newPackage.Id }, response);
     }

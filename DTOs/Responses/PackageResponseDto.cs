@@ -1,8 +1,10 @@
-namespace tracking_api.Models.DTOs;
+namespace tracking_api.DTOs.Responses;
 
 public class PackageResponseDto
 {
     public int Id { get; set; }
+
+    public int TrackingNumber { get; set; }
 
     public string Name { get; set; } = String.Empty;
 
