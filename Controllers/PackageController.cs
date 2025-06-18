@@ -62,7 +62,11 @@ public class PackageController : ControllerBase
 
     [HttpPost]
     public IActionResult Create(PackageDto packageDto)
+
     {
+        if (packageDto.Weight < 0)
+            return BadRequest("El peso no puede ser negativo.");
+
         var destinationLocation = _locations.FirstOrDefault(l => l.Id == packageDto.DestinationLocationId);
 
         if (destinationLocation == null)
