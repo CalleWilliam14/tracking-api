@@ -1,4 +1,4 @@
-namespace tracking_api.Models;
+namespace TrackingApi.Models;
 
 public class Location
 {

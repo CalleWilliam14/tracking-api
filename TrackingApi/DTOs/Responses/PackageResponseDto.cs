@@ -1,6 +1,6 @@
-namespace tracking_api.Models;
+namespace TrackingApi.DTOs.Responses;
 
-public class Package
+public class PackageResponseDto
 {
     public int Id { get; set; }
 
@@ -10,7 +10,5 @@ public class Package
 
     public decimal Weight { get; set; }
 
-    public int DestinationLocationId { get; set; }
-
-    public Location DestinationLocation { get; set; }
+    public LocationResponseDto DestinationLocation { get; set; }
 }
