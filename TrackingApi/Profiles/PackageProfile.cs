@@ -1,9 +1,9 @@
 using AutoMapper;
-using tracking_api.Models;
-using tracking_api.DTOs.Requests;
-using tracking_api.DTOs.Responses;
+using TrackingApi.Models;
+using TrackingApi.DTOs.Requests;
+using TrackingApi.DTOs.Responses;
 
-namespace tracking_api.Profiles;
+namespace TrackingApi.Profiles;
 
 public class PackageProfile: Profile
 {

@@ -1,9 +1,7 @@
-namespace tracking_api.DTOs.Responses;
+namespace TrackingApi.DTOs.Requests;
 
-public class LocationResponseDto
+public class LocationDto
 {
-    public int Id { get; set; }
-    
     public string Country { get; set; } = String.Empty;
 
     public string City { get; set; } = String.Empty;

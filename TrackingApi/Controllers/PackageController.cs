@@ -1,10 +1,11 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using tracking_api.Models;
-using tracking_api.DTOs.Requests;
-using tracking_api.DTOs.Responses;
+using TrackingApi.Helpers;
+using TrackingApi.Models;
+using TrackingApi.DTOs.Requests;
+using TrackingApi.DTOs.Responses;
 
-namespace tracking_api.Controllers;
+namespace TrackingApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -66,7 +67,7 @@ public class PackageController : ControllerBase
         var destinationLocation = _locations.FirstOrDefault(l => l.Id == packageDto.DestinationLocationId);
 
         if (destinationLocation == null)
-            return BadRequest("No se encontro el destino con ID: " + packageDto.DestinationLocationId);
+            return BadRequest(ApiResponse.BadRequest(String.Format("Location with ID {0} doesn't exist.", packageDto.DestinationLocationId)));
 
         var newPackage = _mapper.Map<Package>(packageDto);
 
