@@ -1,0 +1,6 @@
+2025-06-19 00:00:33.589 -04:00 [INF] Application is shutting down...
+2025-06-19 00:07:18.775 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-19 00:07:18.835 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 00:07:18.840 -04:00 [INF] Hosting environment: Development
+2025-06-19 00:07:18.844 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-19 00:38:52.541 -04:00 [INF] Application is shutting down...

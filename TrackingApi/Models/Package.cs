@@ -12,5 +12,5 @@ public class Package
 
     public int DestinationLocationId { get; set; }
 
-    public Location DestinationLocation { get; set; }
+    public Location DestinationLocation { get; set; } = null!;
 }

@@ -10,5 +10,5 @@ public class PackageResponseDto
 
     public decimal Weight { get; set; }
 
-    public LocationResponseDto DestinationLocation { get; set; }
+    public LocationResponseDto DestinationLocation { get; set; } = null!;
 }

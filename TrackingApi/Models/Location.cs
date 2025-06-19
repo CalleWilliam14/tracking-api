@@ -8,5 +8,5 @@ public class Location
 
     public string City { get; set; } = String.Empty;
 
-    public ICollection<Package> Packages { get; set; }
+    public ICollection<Package> Packages { get; set; } = new List<Package>();
 }

@@ -7,6 +7,9 @@ using TrackingApi.DTOs.Requests;
 using TrackingApi.DTOs.Responses;
 using TrackingApi.Profiles;
 using FluentAssertions;
+using Xunit;
+
+using Microsoft.Extensions.Logging;
 
 namespace TrackingApi.Test.Controllers;
 
@@ -24,7 +27,8 @@ public class PackageControllerTest
         });
 
         _mapper = config.CreateMapper();
-        _packageController = new PackageController(_mapper);
+        var loggerMock = new Mock<ILogger<PackageController>>();
+        _packageController = new PackageController(_mapper, loggerMock.Object);
     }
 
     [Fact]
@@ -45,7 +49,7 @@ public class PackageControllerTest
             DestinationLocationId = 1
         };
 
-        _packageController.Create(packageDto);
+        _packageController.CreateBulk(new List<PackageDto> { packageDto });
 
         var result = _packageController.GetById(2);
         var okResult = Assert.IsType<OkObjectResult>(result);

@@ -1,0 +1,85 @@
+2025-06-18 22:28:42.895 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-18 22:28:42.980 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 22:28:42.981 -04:00 [INF] Hosting environment: Development
+2025-06-18 22:28:42.982 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 22:38:00.464 -04:00 [INF] Application is shutting down...
+2025-06-18 22:38:10.263 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-18 22:38:10.306 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 22:38:10.306 -04:00 [INF] Hosting environment: Development
+2025-06-18 22:38:10.307 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 22:49:18.903 -04:00 [INF] Application is shutting down...
+2025-06-18 23:06:56.170 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-18 23:06:56.216 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 23:06:56.216 -04:00 [INF] Hosting environment: Development
+2025-06-18 23:06:56.216 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 23:08:27.584 -04:00 [INF] Application is shutting down...
+2025-06-18 23:08:47.366 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-18 23:08:47.400 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 23:08:47.400 -04:00 [INF] Hosting environment: Development
+2025-06-18 23:08:47.400 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 23:10:06.254 -04:00 [INF] Application is shutting down...
+2025-06-18 23:10:34.816 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-18 23:10:34.848 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 23:10:34.849 -04:00 [INF] Hosting environment: Development
+2025-06-18 23:10:34.849 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 23:15:25.598 -04:00 [INF] Application is shutting down...
+2025-06-18 23:18:16.431 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-18 23:18:16.466 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 23:18:16.467 -04:00 [INF] Hosting environment: Development
+2025-06-18 23:18:16.467 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 23:29:57.430 -04:00 [INF] Application is shutting down...
+2025-06-18 23:31:21.384 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-18 23:31:21.423 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 23:31:21.424 -04:00 [INF] Hosting environment: Development
+2025-06-18 23:31:21.424 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 23:31:48.767 -04:00 [INF] Application is shutting down...
+2025-06-18 23:33:07.127 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-18 23:33:07.169 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 23:33:07.169 -04:00 [INF] Hosting environment: Development
+2025-06-18 23:33:07.169 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 23:38:49.604 -04:00 [INF] Application is shutting down...
+2025-06-18 23:43:36.624 -04:00 [INF] Now listening on: http://localhost:5000
+2025-06-18 23:43:36.677 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 23:43:36.677 -04:00 [INF] Hosting environment: Production
+2025-06-18 23:43:36.677 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 23:47:31.216 -04:00 [INF] Application is shutting down...
+2025-06-18 23:48:16.206 -04:00 [INF] Now listening on: http://localhost:5000
+2025-06-18 23:48:16.244 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 23:48:16.245 -04:00 [INF] Hosting environment: Production
+2025-06-18 23:48:16.245 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 23:52:59.455 -04:00 [INF] Application is shutting down...
+2025-06-18 23:55:33.061 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-18 23:55:33.097 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 23:55:33.097 -04:00 [INF] Hosting environment: Development
+2025-06-18 23:55:33.097 -04:00 [INF] Content root path: C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi
+2025-06-18 23:57:51.913 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger - null null
+2025-06-18 23:57:51.990 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger - 301 0 null 80.7489ms
+2025-06-18 23:57:52.000 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2025-06-18 23:57:52.101 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 101.4158ms
+2025-06-18 23:57:52.355 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2025-06-18 23:57:52.485 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 130.5877ms
+2025-06-18 23:58:12.064 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2025-06-18 23:58:12.065 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 0.8759ms
+2025-06-18 23:58:12.155 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2025-06-18 23:58:12.159 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.8318ms
+2025-06-18 23:59:12.887 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5074/api/Package/bulk - application/json 107
+2025-06-18 23:59:12.896 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-06-18 23:59:12.901 -04:00 [INF] Executing endpoint 'TrackingApi.Controllers.PackageController.CreateBulk (TrackingApi)'
+2025-06-18 23:59:12.936 -04:00 [INF] Route matched with {action = "CreateBulk", controller = "Package"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBulk(System.Collections.Generic.List`1[TrackingApi.DTOs.Requests.PackageDto]) on controller TrackingApi.Controllers.PackageController (TrackingApi).
+2025-06-18 23:59:13.139 -04:00 [INF] Solicitud recibida para crear 1 paquetes en bulk.
+2025-06-18 23:59:13.140 -04:00 [WRN] Destino no encontrado para el paquete con TrackingNumber 0
+2025-06-18 23:59:13.140 -04:00 [INF] Bulk insert: 0 paquetes en 1.6536 ms
+2025-06-18 23:59:13.149 -04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-18 23:59:13.171 -04:00 [INF] Executed action TrackingApi.Controllers.PackageController.CreateBulk (TrackingApi) in 231.3273ms
+2025-06-18 23:59:13.172 -04:00 [INF] Executed endpoint 'TrackingApi.Controllers.PackageController.CreateBulk (TrackingApi)'
+2025-06-18 23:59:13.172 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5074/api/Package/bulk - 200 null application/json; charset=utf-8 284.9484ms
+2025-06-18 23:59:16.103 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5074/api/Package/bulk - application/json 107
+2025-06-18 23:59:16.104 -04:00 [INF] Executing endpoint 'TrackingApi.Controllers.PackageController.CreateBulk (TrackingApi)'
+2025-06-18 23:59:16.105 -04:00 [INF] Route matched with {action = "CreateBulk", controller = "Package"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBulk(System.Collections.Generic.List`1[TrackingApi.DTOs.Requests.PackageDto]) on controller TrackingApi.Controllers.PackageController (TrackingApi).
+2025-06-18 23:59:16.107 -04:00 [INF] Solicitud recibida para crear 1 paquetes en bulk.
+2025-06-18 23:59:16.107 -04:00 [WRN] Destino no encontrado para el paquete con TrackingNumber 0
+2025-06-18 23:59:16.107 -04:00 [INF] Bulk insert: 0 paquetes en 0.3138 ms
+2025-06-18 23:59:16.108 -04:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-18 23:59:16.108 -04:00 [INF] Executed action TrackingApi.Controllers.PackageController.CreateBulk (TrackingApi) in 3.1946ms
+2025-06-18 23:59:16.109 -04:00 [INF] Executed endpoint 'TrackingApi.Controllers.PackageController.CreateBulk (TrackingApi)'
+2025-06-18 23:59:16.109 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5074/api/Package/bulk - 200 null application/json; charset=utf-8 6.0409ms

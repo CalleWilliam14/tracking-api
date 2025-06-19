@@ -1,4 +1,15 @@
+using Serilog;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Configura Serilog para registrar en un archivo .log
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/app-log.txt", rollingInterval: RollingInterval.Day)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddAutoMapper(typeof(Program));
