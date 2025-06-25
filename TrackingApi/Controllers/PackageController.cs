@@ -67,8 +67,35 @@ public class PackageController : ControllerBase
         return Ok(response);
     }
 
-    [HttpPost("bulk")]
-    public IActionResult CreateBulk([FromBody] List<PackageDto> packages)
+    [HttpPost]
+    public IActionResult Create(PackageDto packageDto)
+    {
+        var destinationLocation = _locations.FirstOrDefault(l => l.Id == packageDto.DestinationLocationId);
+
+        if (destinationLocation == null)
+            return BadRequest(ApiResponse.BadRequest(String.Format("Location with ID {0} doesn't exist.", packageDto.DestinationLocationId)));
+
+        var newPackage = _mapper.Map<Package>(packageDto);
+
+        newPackage.Id = _packages.Count + 1;
+        newPackage.DestinationLocation = destinationLocation;
+
+        _packages.Add(newPackage);
+
+        var response = _mapper.Map<PackageResponseDto>(newPackage);
+
+        return CreatedAtAction(nameof(GetById), new { id = newPackage.Id }, response);
+    }
+
+    var elapsed = DateTime.UtcNow - start;
+        // Log de rendimiento
+        _logger.LogInformation("Bulk insert: {Count} paquetes en {Elapsed} ms", created, elapsed.TotalMilliseconds);
+
+        return Ok(new { created, elapsed = elapsed.TotalMilliseconds });
+    }
+
+    [HttpPost("packages")]
+    public IActionResult CreatePackages([FromBody] List<PackageDto> packages)
     {
         var created = 0;
         var start = DateTime.UtcNow;

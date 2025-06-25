@@ -1,9 +1,10 @@
 using Serilog;
-
+using Prometheus;
 var builder = WebApplication.CreateBuilder(args);
 
 // Configura Serilog para registrar en un archivo .log
 Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information
     .WriteTo.Console()
     .WriteTo.File("logs/app-log.txt", rollingInterval: RollingInterval.Day)
     .Enrich.FromLogContext()
@@ -26,12 +27,15 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
 }
 
 app.UseHttpsRedirection();
+app.UseHttpMetrics();
 
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapMetrics();
 
 app.Run();
