@@ -49,7 +49,7 @@ public class PackageController : ControllerBase
         var package = _packages.FirstOrDefault(p => p.Id == id);
 
         if (package == null) return NotFound();
-        _logger.LogWarning("No se encontró el paquete con Id {Id}", id);
+        _logger.LogWarning("No se encontrï¿½ el paquete con Id {Id}", id);
         var response = _mapper.Map<PackageResponseDto>(package);
 
         return Ok(response);
@@ -58,10 +58,13 @@ public class PackageController : ControllerBase
     [HttpGet("track/{trackingNumber}")]
     public IActionResult GetByTrackingNumber(int trackingNumber)
     {
+        _logger.LogInformation("Solicitud recibida para obtener el paquete con TrackingNumber {TrackingNumber}", trackingNumber);
         var package = _packages.FirstOrDefault(p => p.TrackingNumber == trackingNumber);
 
-        if (package == null) return NotFound();
-
+        if (package == null){
+            _logger.LogWarning("No se encontrï¿½ el paquete con TrackingNumber {TrackingNumber}", trackingNumber);
+            return NotFound();
+        } 
         var response = _mapper.Map<PackageResponseDto>(package);
 
         return Ok(response);
@@ -92,7 +95,7 @@ public class PackageController : ControllerBase
         _logger.LogInformation("Bulk insert: {Count} paquetes en {Elapsed} ms", created, elapsed.TotalMilliseconds);
 
         return Ok(new { created, elapsed = elapsed.TotalMilliseconds });
-    }
+    
 
     [HttpPost("packages")]
     public IActionResult CreatePackages([FromBody] List<PackageDto> packages)
@@ -124,7 +127,7 @@ public class PackageController : ControllerBase
 
         var elapsed = DateTime.UtcNow - start;
         // Log de rendimiento
-        _logger.LogInformation("Bulk insert: {Count} paquetes en {Elapsed} ms", created, elapsed.TotalMilliseconds);
+        _logger.LogInformation("se insertaron: {Count} paquetes en {Elapsed} ms", created, elapsed.TotalMilliseconds);
 
         return Ok(new { created, elapsed = elapsed.TotalMilliseconds });
     }
