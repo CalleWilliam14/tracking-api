@@ -14,7 +14,7 @@ public class PackageController : ControllerBase
 {
     private static List<Location> _locations = new()
     {
-        new Location { Id = 1, Country = "Bolivia", City = "Cochabamba" },
+        new Location { Id = 1, Country = "Bolivia", City = "Comanta" },
         new Location { Id = 2, Country = "Bolivia", City = "La Paz" },
         new Location { Id = 3, Country = "Bolivia", City = "Santa Cruz" }
     };
@@ -90,12 +90,7 @@ public class PackageController : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id = newPackage.Id }, response);
     }
 
-    var elapsed = DateTime.UtcNow - start;
-        // Log de rendimiento
-        _logger.LogInformation("Bulk insert: {Count} paquetes en {Elapsed} ms", created, elapsed.TotalMilliseconds);
 
-        return Ok(new { created, elapsed = elapsed.TotalMilliseconds });
-    
 
     [HttpPost("packages")]
     public IActionResult CreatePackages([FromBody] List<PackageDto> packages)
