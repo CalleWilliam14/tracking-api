@@ -18,7 +18,7 @@ public class PackageController : ControllerBase
 {
     private static List<Location> _locations = new()
     {
-        new Location { Id = 1, Country = "Bolivia", City = "Comatttttttttttttttttt" },
+        new Location { Id = 1, Country = "Bolivia", City = "Cochabamba" },
         new Location { Id = 2, Country = "Bolivia", City = "La Paz" },
         new Location { Id = 3, Country = "Bolivia", City = "Santa Cruz" }
     };
@@ -77,6 +77,9 @@ public class PackageController : ControllerBase
     [HttpPost]
     public IActionResult Create(PackageDto packageDto)
     {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
         var destinationLocation = _locations.FirstOrDefault(l => l.Id == packageDto.DestinationLocationId);
 
         if (destinationLocation == null)
@@ -93,8 +96,6 @@ public class PackageController : ControllerBase
 
         return CreatedAtAction(nameof(GetById), new { id = newPackage.Id }, response);
     }
-
-
 
     [HttpPost("packages")]
     public IActionResult CreatePackages([FromBody] List<PackageDto> packages)

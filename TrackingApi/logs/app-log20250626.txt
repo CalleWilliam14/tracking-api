@@ -1,0 +1,82 @@
+2025-06-26 09:34:40.167 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-26 09:34:40.266 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-26 09:34:40.267 -04:00 [INF] Hosting environment: Development
+2025-06-26 09:34:40.267 -04:00 [INF] Content root path: /home/william/Development/Dotnet/tracking-api/TrackingApi
+2025-06-26 10:51:03.363 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2025-06-26 10:51:03.631 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 270.5645ms
+2025-06-26 10:51:03.717 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/swagger-ui-bundle.js - null null
+2025-06-26 10:51:04.032 -04:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-06-26 10:51:04.035 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 318.7115ms
+2025-06-26 10:51:04.413 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2025-06-26 10:51:04.550 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 137.4533ms
+2025-06-26 10:51:20.347 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/api/Package/manifest/pdf - null null
+2025-06-26 10:51:20.356 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-06-26 10:51:20.374 -04:00 [INF] Executing endpoint 'TrackingApi.Controllers.PackageController.GetManifestPdf (TrackingApi)'
+2025-06-26 10:51:20.402 -04:00 [INF] Route matched with {action = "GetManifestPdf", controller = "Package"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetManifestPdf() on controller TrackingApi.Controllers.PackageController (TrackingApi).
+2025-06-26 10:51:20.546 -04:00 [INF] Solicitud recibida para generar el manifiesto PDF
+2025-06-26 10:51:59.519 -04:00 [INF] PDF generado correctamente
+2025-06-26 10:51:59.521 -04:00 [INF] Executing FileContentResult, sending file with download name 'manifiesto.pdf' ...
+2025-06-26 10:51:59.531 -04:00 [INF] Executed action TrackingApi.Controllers.PackageController.GetManifestPdf (TrackingApi) in 39122.8917ms
+2025-06-26 10:51:59.531 -04:00 [INF] Executed endpoint 'TrackingApi.Controllers.PackageController.GetManifestPdf (TrackingApi)'
+2025-06-26 10:51:59.541 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/api/Package/manifest/pdf - 200 22108 application/pdf 39193.9914ms
+2025-06-26 11:40:40.577 -04:00 [INF] Application is shutting down...
+2025-06-26 14:20:59.472 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-26 14:20:59.576 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-26 14:20:59.578 -04:00 [INF] Hosting environment: Development
+2025-06-26 14:20:59.578 -04:00 [INF] Content root path: /home/william/Development/Dotnet/tracking-api/TrackingApi
+2025-06-26 14:21:03.057 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/ - null null
+2025-06-26 14:21:03.202 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-06-26 14:21:03.256 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/ - 404 0 null 210.7818ms
+2025-06-26 14:21:03.269 -04:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5074/, Response status code: 404
+2025-06-26 14:21:23.384 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2025-06-26 14:21:23.531 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 150.5327ms
+2025-06-26 14:21:24.593 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2025-06-26 14:21:24.742 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 148.474ms
+2025-06-26 14:21:43.239 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5074/api/Package - application/json 91
+2025-06-26 14:21:43.245 -04:00 [INF] Executing endpoint 'TrackingApi.Controllers.PackageController.Create (TrackingApi)'
+2025-06-26 14:21:43.283 -04:00 [INF] Route matched with {action = "Create", controller = "Package"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(TrackingApi.DTOs.Requests.PackageDto) on controller TrackingApi.Controllers.PackageController (TrackingApi).
+2025-06-26 14:21:43.536 -04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-06-26 14:21:43.596 -04:00 [INF] Executed action TrackingApi.Controllers.PackageController.Create (TrackingApi) in 304.9503ms
+2025-06-26 14:21:43.596 -04:00 [INF] Executed endpoint 'TrackingApi.Controllers.PackageController.Create (TrackingApi)'
+2025-06-26 14:21:43.597 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5074/api/Package - 400 null application/problem+json; charset=utf-8 358.2758ms
+2025-06-26 14:24:07.630 -04:00 [INF] Application is shutting down...
+2025-06-26 14:24:28.487 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-26 14:24:28.600 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-26 14:24:28.602 -04:00 [INF] Hosting environment: Development
+2025-06-26 14:24:28.602 -04:00 [INF] Content root path: /home/william/Development/Dotnet/tracking-api/TrackingApi
+2025-06-26 14:24:28.922 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5074/api/Package - application/json 91
+2025-06-26 14:24:29.037 -04:00 [WRN] Failed to determine the https port for redirect.
+2025-06-26 14:24:29.106 -04:00 [INF] Executing endpoint 'TrackingApi.Controllers.PackageController.Create (TrackingApi)'
+2025-06-26 14:24:29.150 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2025-06-26 14:24:29.180 -04:00 [INF] Route matched with {action = "Create", controller = "Package"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(TrackingApi.DTOs.Requests.PackageDto) on controller TrackingApi.Controllers.PackageController (TrackingApi).
+2025-06-26 14:24:29.422 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 271.7632ms
+2025-06-26 14:24:29.488 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-26 14:24:29.503 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 14.5739ms
+2025-06-26 14:24:29.574 -04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-06-26 14:24:29.655 -04:00 [INF] Executed action TrackingApi.Controllers.PackageController.Create (TrackingApi) in 466.9007ms
+2025-06-26 14:24:29.655 -04:00 [INF] Executed endpoint 'TrackingApi.Controllers.PackageController.Create (TrackingApi)'
+2025-06-26 14:24:29.668 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5074/api/Package - 400 null application/problem+json; charset=utf-8 749.8009ms
+2025-06-26 14:24:30.005 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2025-06-26 14:24:30.161 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 155.729ms
+2025-06-26 14:24:59.610 -04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5074/api/Package - application/json 91
+2025-06-26 14:24:59.613 -04:00 [INF] Executing endpoint 'TrackingApi.Controllers.PackageController.Create (TrackingApi)'
+2025-06-26 14:24:59.614 -04:00 [INF] Route matched with {action = "Create", controller = "Package"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create(TrackingApi.DTOs.Requests.PackageDto) on controller TrackingApi.Controllers.PackageController (TrackingApi).
+2025-06-26 14:24:59.618 -04:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-06-26 14:24:59.619 -04:00 [INF] Executed action TrackingApi.Controllers.PackageController.Create (TrackingApi) in 4.1525ms
+2025-06-26 14:24:59.619 -04:00 [INF] Executed endpoint 'TrackingApi.Controllers.PackageController.Create (TrackingApi)'
+2025-06-26 14:24:59.622 -04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5074/api/Package - 400 null application/problem+json; charset=utf-8 12.4253ms
+2025-06-26 14:33:23.416 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2025-06-26 14:33:23.418 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 1.9696ms
+2025-06-26 14:33:23.506 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-26 14:33:23.507 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.5614ms
+2025-06-26 14:33:30.098 -04:00 [INF] Now listening on: http://localhost:5074
+2025-06-26 14:33:30.193 -04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-26 14:33:30.195 -04:00 [INF] Hosting environment: Development
+2025-06-26 14:33:30.195 -04:00 [INF] Content root path: /home/william/Development/Dotnet/tracking-api/TrackingApi
+2025-06-26 14:33:30.253 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/index.html - null null
+2025-06-26 14:33:30.581 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/index.html - 200 null text/html;charset=utf-8 332.8819ms
+2025-06-26 14:33:30.663 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-26 14:33:30.667 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 5.5223ms
+2025-06-26 14:33:30.927 -04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - null null
+2025-06-26 14:33:31.167 -04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5074/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 239.6065ms
+2025-06-26 15:46:13.657 -04:00 [INF] Application is shutting down...
