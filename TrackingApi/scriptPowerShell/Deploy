@@ -1,31 +1,33 @@
 # Variables
-$projectPath = "C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi"
-$publishPath = "C:\Deploy\TrackingAPI"
+$projectPath = "C:\Users\Lenovo.ANDRES\source\repos\tracking-api\TrackingApi\TrackingApi.csproj"
+$publishPath = "C:\Users\Lenovo.ANDRES\source\repos\tracking-api\Release"
 $siteName = "TrackingAPI"
-$appPool = "TrackingAPIAppPool"
 $port = 8080
 
-# 1. Publicar el proyecto
-dotnet publish $projectPath -c Release -o $publishPath
 
 # 2. Importar el módulo de IIS
 Import-Module WebAdministration
-
-# 3. Crear el Application Pool si no existe
-if (-not (Get-WebAppPoolState -Name $appPool -ErrorAction SilentlyContinue)) {
-    New-WebAppPool -Name $appPool
-}
-
-# 4. Crear el sitio en IIS si no existe
-if (-not (Get-Website -Name $siteName -ErrorAction SilentlyContinue)) {
-    New-Website -Name $siteName -Port $port -PhysicalPath $publishPath -ApplicationPool $appPool
+# 3. Detener el sitio si está iniciado
+if ((Get-Website -Name $siteName).State -eq 'Started') {
+    
+    Stop-Website -Name $siteName
+    Write-Host "Sitio detenido: $siteName"
 } else {
-    # Si ya existe, solo actualiza la ruta física
-    Set-ItemProperty "IIS:\Sites\$siteName" -Name physicalPath -Value $publishPath
+    Write-Host "El sitio ya estaba detenido: $siteName"
 }
 
-# 5. Reiniciar el sitio
-Restart-WebAppPool $appPool
-Restart-Website $siteName
+# 4. Esperar a que el sitio esté realmente detenido
+while ((Get-Website -Name $siteName).State -ne 'Stopped') {
+    Start-Sleep -Seconds 1
+    Write-Host "Esperando a que el sitio se detenga..."
+}
 
-Write-Host "Despliegue completado en IIS para $siteName en el puerto $port"
+# 5. Publicar
+Write-Host "Publicando..."
+dotnet publish $projectPath -c Release -o $publishPath 
+
+# 6. Iniciar el sitio
+Start-Website -Name $siteName
+Write-Host "Sitio iniciado: $siteName"
+
+Write-Host "Despliegue simplificado completado en IIS para $siteName en el puerto $port"
